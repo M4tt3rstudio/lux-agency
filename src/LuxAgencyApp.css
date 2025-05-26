@@ -154,21 +154,24 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 9999;
-  cursor: zoom-out;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* pour éviter que l’image touche les bords */
+  overflow-y: auto; /* permet de scroller si trop grand */
 }
 
 .lightbox img {
   max-width: 100%;
   max-height: 100%;
+  height: auto;
+  width: auto;
   object-fit: contain;
+  display: block;
 }
 
 /* --- PDF GALLERY --- */
