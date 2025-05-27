@@ -16,8 +16,14 @@ export default function PropertyCard({ item, onClick }) {
     }
   }, [item]);
 
+  const isSold = item.price.toLowerCase().includes('sold');
+
   return (
     <div className="property-card" onClick={onClick}>
+      {isSold && (
+        <span className="sold-badge">SOLD</span>
+      )}
+
       {pdfFile && terrainPage !== null ? (
         <div className="pdf-card-preview">
           <Document file={pdfFile} loading="Chargement...">
@@ -35,7 +41,9 @@ export default function PropertyCard({ item, onClick }) {
 
       <h3>{item.title}</h3>
       <p>{item.location}</p>
-      <p>{item.price}</p>
+      <p style={{ color: isSold ? 'red' : 'inherit', fontWeight: isSold ? 'bold' : 'normal' }}>
+        {item.price}
+      </p>
       <p>{item.size}</p>
 
       {item.description && (

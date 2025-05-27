@@ -316,3 +316,24 @@
 }
 
 }
+
+.price-sold {
+  color: red;
+  font-weight: bold;
+}
+
+.sold-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 10;
+}
+.property-card {
+  position: relative;
+}
