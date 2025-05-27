@@ -661,7 +661,7 @@ documents: [
     id: 21,
     title: 'LAND – LAMAI SEA VIEW',
     location: 'KOH SAMUI Lamai',
-    price: '8 000 000 THB per Rai',
+    price: 'SOLD',
     type: 'terrain',
     terrain: '-',
     description: 'SEA VIEW',
